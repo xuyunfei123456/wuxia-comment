@@ -1,13 +1,13 @@
 {
-  "name": "code-jianghu",
+  "name": "wuxia-comment",
   "version": "1.0.0",
   "main": "demo2.js",
   "type": "module",
+  "author": "KaSong",
   "scripts": {
-    "wuxia": "node demo1.js examples/quick_sort.js"
+    "wuxia": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
