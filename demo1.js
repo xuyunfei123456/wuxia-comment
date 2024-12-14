@@ -1,3 +1,4 @@
+import { fileURLToPath } from "url";
 import { Ollama } from "@langchain/ollama";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { RunnableSequence } from "@langchain/core/runnables";
@@ -7,7 +8,7 @@ import fs from "fs/promises";
 
 // 初始化模型
 const llm = new Ollama({
-  modelName: "qwen2.5:7b",
+  model: "qwen2.5:7b",
   temperature: 0.8,
   verbose: true,
 });
@@ -47,7 +48,7 @@ const plotDesignPrompt = PromptTemplate.fromTemplate(`
 1. 以江湖故事形式展开
 2. 包含人物对话
 3. 体现代码执行流程
-4. 融入江湖术语
+4. 融��江湖术语
 5. 保持趣味性的同时不失专业性
 `);
 
