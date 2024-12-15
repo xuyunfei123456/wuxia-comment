@@ -82,7 +82,7 @@ export const prompt3_3_plotDesign = PromptTemplate.fromTemplate(`
   2. 故事情节包含江湖儿女的恩怨情仇，精彩纷呈，引人入胜
   `);
 
-// 拆分明确的需求，步骤4：注释生成
+// 拆分明确的需求，步骤4：生成注释
 export const prompt3_4_commentGenerator = PromptTemplate.fromTemplate(`
   基于以下武侠故事，为代码生成热血沸腾的武侠风注释：
   {plot}

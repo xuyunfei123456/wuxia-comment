@@ -12,6 +12,8 @@ async function generateWuxiaCodeComments(code, runnable) {
 
 export async function processCodeFile(filePath, runnable) {
   try {
+    const startTime = performance.now();
+
     // 读取文件内容
     const code = await fs.readFile(filePath, "utf-8");
 
@@ -21,7 +23,10 @@ export async function processCodeFile(filePath, runnable) {
     // 将结果写回文件
     await fs.writeFile(filePath, annotatedCode, "utf-8");
 
-    console.log("生成注释成功：", filePath);
+    const endTime = performance.now();
+    const timeElapsed = ((endTime - startTime) / 1000).toFixed(2); // 转换为秒，保留两位小数
+
+    console.log(`生成注释成功：${filePath} (用时: ${timeElapsed}秒)`);
   } catch (error) {
     console.error(`生成注释出错：${filePath}:`, error);
     throw error;
