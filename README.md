@@ -27,6 +27,12 @@ wuxia-comment/
 │ ├── quick_sort1.js # 示例 1（为 chain1 准备）
 │ ├── quick_sort2.js # 示例 2（为 chain2 准备）
 │ └── quick_sort3.js # 示例 3（为 chain3 准备）
+├── benchmark/ # 评测目录
+│ ├── index.js # 评测入口
+│ ├── evaluate.js # 评估器实现
+│ ├── analyze.js # 结果分析器
+│ └── testcases/ # 测试用例
+│ └── models/ # 模型配置
 
 ### 不同 Chain 的说明
 
