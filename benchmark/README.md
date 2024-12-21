@@ -19,6 +19,7 @@ benchmark/
 ├── README.md           # 说明文档
 ├── index.js            # 评测入口
 ├── evaluate.js         # 评估器：根据“评估纬度”评估模型
+├── benchmark.js         # 基准测试：基准测试的执行流程
 ├── analyze.js          # 分析器：生成模型排名报告
 ├── testsuit/          # 测试相关数据
 │   └── testModels      # 符合“合规、隐私要求的大模型”列表

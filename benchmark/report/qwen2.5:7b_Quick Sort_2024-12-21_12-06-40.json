@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "qwen2.5:7b",
+  "modelFrom": "local",
+  "timeCost": 23.4,
+  "testCaseOutput": "// 江湖儿女恩怨情仇，独步武林之快速排序神功！\n// 策划之士决定任务：如何以一招破解强敌？\nfunction quickSort(arr) {\n\n  // 初入江湖，少年英雄，初试锋芒。\n  if (arr.length <= 1) return arr;\n\n  // 身怀绝技，挑选门派领袖作为枢纽点，如流星般闪耀。\n  const pivot = arr[0];\n  // 左边弟子群雄并起，右边豪杰林立。\n  const left = [];\n  const right = [];\n\n  // 大浪淘沙，逐个门人甄别分派。高手过招，快意恩仇。\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      right.push(arr[i]);\n    }\n  }\n\n  // 招招连环，快刀斩乱麻。\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0,
+  "outputTokensCost": 0,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 10,
+  "styleConsistency": 9,
+  "readability": 8,
+  "creativity": 9
+}
