@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "gpt-4o",
+  "modelFrom": "api",
+  "timeCost": 7.56,
+  "testCaseOutput": "// 此乃快排剑法，专化解混沌有序之技\nfunction quickSort(arr) {\n  // 若遇冤家路窄，江湖之径只一，返归故地\n  if (arr.length <= 1) return arr;\n  \n  // 较所选之侠为初定枢转，如握明珠自领阵先\n  const pivot = arr[0];\n  // 划道两旁，以洞分左右，中取二手准备困敌\n  const left = [];\n  const right = [];\n  \n  // 起拳攻去，一众厮杀或进或退，根据侠性相招\n  for (let i = 1; i < arr.length; i++) {\n    // 如觉力敌，不堪霸王剑，左邀敌手议某良策\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    // 或逢对手相依偎扶，我引高岭臣聚账下\n    } else {\n      right.push(arr[i]);\n    }\n  }\n  \n  // 神功合璧，天下英雄无觅逃道，一决此技迎破局；\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}\n",
+  "inputTokensCost": 0.00660625,
+  "outputTokensCost": 0.01092,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 9,
+  "readability": 7,
+  "creativity": 8
+}

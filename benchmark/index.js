@@ -35,7 +35,10 @@ async function reportOutput(data) {
     now.toLocaleDateString("zh-CN").replace(/\//g, "-") +
     "_" +
     now.toLocaleTimeString("zh-CN", { hour12: false }).replace(/:/g, "-");
-  const filename = `${data.modelName}_${data.testCaseName}_${localDateTime}.json`;
+  const filename = `${data.modelName.replace(
+    /[\\/:*?"<>|]/g,
+    "_"
+  )}_${data.testCaseName.replace(/[\\/:*?"<>|]/g, "_")}_${localDateTime}.json`;
   const filePath = path.join(reportDir, filename);
   await fs.writeFile(filePath, JSON.stringify(data, null, 2));
   console.log(`输出报告： ${filePath}`);
