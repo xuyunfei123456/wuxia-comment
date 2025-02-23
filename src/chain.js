@@ -6,13 +6,19 @@ import {
   prompt3_3_plotDesign,
   prompt3_4_commentGenerator,
 } from "./prompt.js";
-import { z } from "zod";
-import { StructuredOutputParser } from "langchain/output_parsers";
-import { Ollama } from "@langchain/ollama";
+import {
+  z
+} from "zod";
+import {
+  StructuredOutputParser
+} from "langchain/output_parsers";
+import {
+  Ollama
+} from "@langchain/ollama";
 
 // 初始化模型
 const llm = new Ollama({
-  model: "qwen2.5:7b",
+  model: "qwen2.5:14b",
   temperature: 1.5, // 高温，降低概论，提高多样性
   frequency_penalty: 1, // 降低已出现token的再次出现概率，增加表达方式多样性
   verbose: true, // 打印模型输出
@@ -38,19 +44,17 @@ async function runnableOutputParser(input) {
   return parsed.code;
 }
 
-export const chain1 = [
-  {
+export const chain1 = [{
     annotatedCode: (input) =>
       prompt1_origin.pipe(llm).invoke({
         code: input.code,
-        format_instructions: outputParser.getFormatInstructions(),
+        format_instructions: outputParser.getFormatInstructions(), //结构化提示词文本
       }),
   },
-  runnableOutputParser,
+  runnableOutputParser, //结构化输出的解析器
 ];
 
-export const chain2 = [
-  {
+export const chain2 = [{
     annotatedCode: (input) =>
       prompt2_clarification.pipe(llm).invoke({
         code: input.code,
@@ -61,13 +65,14 @@ export const chain2 = [
 ];
 
 // 构建处理链
-export const chain3 = [
-  {
+export const chain3 = [{
     code: (input) => input.code,
     analysis: async (input) => {
       const response = await prompt3_1_codeAnalysis
         .pipe(llm)
-        .invoke({ code: input.code });
+        .invoke({
+          code: input.code
+        });
       return response;
     },
   },
@@ -76,7 +81,9 @@ export const chain3 = [
     setting: async (input) => {
       const response = await prompt3_2_wuxiaSetting
         .pipe(llm)
-        .invoke({ analysis: input.analysis });
+        .invoke({
+          analysis: input.analysis
+        });
       return response;
     },
   },
@@ -85,7 +92,9 @@ export const chain3 = [
     plot: async (input) => {
       const response = await prompt3_3_plotDesign
         .pipe(llm)
-        .invoke({ setting: input.setting });
+        .invoke({
+          setting: input.setting
+        });
       return response;
     },
   },
