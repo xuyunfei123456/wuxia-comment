@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "qwen2.5:7b",
+  "modelFrom": "local",
+  "timeCost": 19.51,
+  "testCaseOutput": "// 【江湖秘籍】快速排序神功！\n// 西子湖畔，绝世高手在此练武，施展绝学于刀光剑影间\n// 江湖之中，无数门派汇聚，共论武功秘技\n// 快速排序之术，出自古武大侠李青锋之手，威力无穷！\nfunction quickSort(arr) {\n  // 初步观战：阵法已布，待吾施展出快速排序神功\n  if (arr.length <= 1) return arr;\n\n  // 大军压境，选个厉害角色做主将，乃青锋之流\n  const pivot = arr[0];\n  // 左翼军右翼军分开，列阵完毕！\n  const left = [];\n  const right = [];\n\n  // 一箭双雕，攻防一体。逐一筛选，高手过招讲究的不就是这一步吗？\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      right.push(arr[i]);\n    }\n  }\n\n  // 回合开始！先攻破左翼，再杀向右翼。好个快字诀！\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0,
+  "outputTokensCost": 0,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 8,
+  "readability": 7,
+  "creativity": 7
+}

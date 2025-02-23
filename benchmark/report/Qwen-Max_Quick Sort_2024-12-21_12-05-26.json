@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "Qwen-Max",
+  "modelFrom": "api",
+  "timeCost": 16.82,
+  "testCaseOutput": "// 在这个江湖中，有一项至高无上的任务 - 快马逐风术\n// 凡是完成它者，能够使一群江湖儿女按照力量大小有序排列，\n// 从而避免不必要的纷争。\n\n// 如果武林中无人，则和平自然到；\nfunction quickSort(arr) {\n  if (arr.length <= 1) return arr;\n\n  // 一派掌门，以自身武功为标准，\n  // 分别将江湖英雄划入左军（低于掌门）、右翼（强于掌门）之列，\n  const pivot = arr[0];\n  const left = [];\n  const right = [];\n\n  // 从此遍历江湖上各路英雄豪杰，\n  // 依照武功高低，分门别入，\n  // 以期达到左右两边皆秩序井然，不乱一方。\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      right.push(arr[i]);\n    }\n  }\n\n  // 以快速身法重排江湖新序。先是左军，其次掌门，最后右翼。\n  // 以快打快，最终完成整个武林的秩序。\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0.016166919999999998,
+  "outputTokensCost": 0.02127125,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 8,
+  "readability": 7,
+  "creativity": 9
+}

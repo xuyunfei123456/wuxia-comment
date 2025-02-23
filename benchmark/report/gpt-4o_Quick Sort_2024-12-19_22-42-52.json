@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "gpt-4o",
+  "modelFrom": "api",
+  "timeCost": 12.05,
+  "testCaseOutput": "// 江湖上流传着一个千古之术——快刀斩乱麻，仅凭其指便能天下豪杰心折。\n// 快速返回，以乱世传承衍化为太平之势，阻隔险途于此前。\nfunction quickSort(arr) {\n  // 若众侠不在，为了应付练盟江湖序，先行圆合壮景后礼。\n  if (arr.length <= 1) return arr;\n  \n  // 五岳中山至君，新旧排世出，为势压。\n  const pivot = arr[0];\n  // 东引同伴志，在泽为竹影。\n  const left = [];\n  // 回转征夫势，转回更承上。侪风迷衣暮然远幽染易生！\n  const right = [];\n  \n  // 数按论如何摄罗，总势快技眼催彼彼涌，只在观烈反势。\n  for (let i = 1; i < arr.length; i++) {\n    // 若项共植霭没禅知流聚名落青争质主历扬。\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      // 万晓权成势九境云卓起划皆灭\n      right.push(arr[i]);\n    }\n  }\n  \n  // 世自激态轩际藏勇九说以步跃拳还阵力原笑，不争洫跃或阴。\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}\n",
+  "inputTokensCost": 0.00660625,
+  "outputTokensCost": 0.01337,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 7,
+  "readability": 4,
+  "creativity": 8
+}

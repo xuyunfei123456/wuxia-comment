@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "gpt-4o",
+  "modelFrom": "api",
+  "timeCost": 5.78,
+  "testCaseOutput": "// 在这江湖纷争之中，排序乃定千钧一发，事了生风之必需技法。\nfunction quickSort(arr) {\n  // 若传闻此派人迹罕至，则无缘纷争，传回孤兵自身。\n  if (arr.length <= 1) return arr;\n  \n  // 开宗大旗在此竖定，以首命为期号召弟子门人。\n  const pivot = arr[0];\n  // 承志堂系、激流分隔、英雄毕派。\n  const left = [];\n  const right = [];\n  \n  // 招徕天下贤才，若再禀承此王可左右迤避，天助齐至。\n  for (let i = 1; i < arr.length; i++) {\n    // 若次年龙咆下适，臂亡中受己洛道，只续王遥拔四。\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      // 或陵努满幅各旧成悔护马临目凭刀法内章廓梢光抱者所。\n      right.push(arr[i]);\n    }\n  }\n  \n  // 耐天险乱合，一路一脉，相遇却敢履赤。\n  // 华山剑法积业破雷三生灰续，却议行同太易接眉海戎园泊亨通。\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0.00660625,
+  "outputTokensCost": 0.01309,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 10,
+  "styleConsistency": 7,
+  "readability": 4,
+  "creativity": 7
+}

@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "qwen2.5:7b",
+  "modelFrom": "local",
+  "timeCost": 24.09,
+  "testCaseOutput": "//【初出茅庐，江湖求路】\n//本段代码乃江湖中流传甚广的'快意恩仇录'之一章节。此功法以一念之间为引子，运用独门秘籍‘分左分右’，巧妙化解纷争。\n\nfunction quickSort(arr) {\n  //【天道酬勤，人定胜天】\n  if (arr.length <= 1) return arr;\n  \n  //【一阳指显神威，点破乾坤】\n  const pivot = arr[0];\n  //【风清扬传独行，剑气直指人心】\n  const left = [];\n  const right = [];\n  \n  //【刀光剑影，各自为战】\n  for (let i = 1; i < arr.length; i++) {\n    if (arr[i] < pivot) {\n      //【铁掌帮主传功，左道旁门】\n      left.push(arr[i]);\n    } else {\n      //【玄机散人秘技，右道心法】\n      right.push(arr[i]);\n    }\n  }\n  \n  //【剑出鞘，万刃生辉】\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0,
+  "outputTokensCost": 0,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 7,
+  "readability": 6,
+  "creativity": 8
+}

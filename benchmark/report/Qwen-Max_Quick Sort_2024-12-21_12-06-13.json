@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "Qwen-Max",
+  "modelFrom": "api",
+  "timeCost": 42.11,
+  "testCaseOutput": "function quickSort(arr) {\n  // 江湖中有一位快刀手，专治纷乱，若江湖小纷争不过一人之力，自然无需动刀。 \n  if (arr.length <= 1) return arr; // 一统天下，则江湖自定。\n  \n  // 他自认武功盖世无双，取其名作为挑战令\n  const pivot = arr[0];\n  // 江东之士，轻灵若水\n  const left = [];\n  // 江右之人，稳重如山 \n  const right = [];\n  \n  // 面对江湖各路英豪，快刀手开始点将分配\n  for (let i = 1; i < arr.length; i++) {\n    // 劫掠者虽武艺不俗但若不及挑战令轻灵，归东\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {      \n      // 武艺厚重者或有更猛于挑战令者，应居于西\n      right.push(arr[i]);\n    }\n  }\n  \n  // 通过巧妙策略让左右之人再度自我整队，终得快刀平天下 \n  return [...quickSort(left), pivot, ...quickSort(right)];\n}\n",
+  "inputTokensCost": 0.016166919999999998,
+  "outputTokensCost": 0.0206822,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 9,
+  "styleConsistency": 9,
+  "readability": 7,
+  "creativity": 8
+}

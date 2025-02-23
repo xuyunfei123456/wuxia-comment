@@ -1,0 +1,15 @@
+{
+  "testCaseName": "Quick Sort",
+  "wrongStructure": false,
+  "modelName": "gpt-4o",
+  "modelFrom": "api",
+  "timeCost": 6.45,
+  "testCaseOutput": "// 在那江湖动荡之处，快速排序绝技肩负梳理混乱数列之使命。\nfunction quickSort(arr) {\n  // 若数列平静如湖，则无需多虑，顺势而下，乃大道也。\n  if (arr.length <= 1) return arr;\n  \n  // 擎天之阵中必有一合适切口，如非败犬，首劈石川。\n  const pivot = arr[0];\n  // 自傲然挺立之间，或左旋，或右旋，断成数段。\n  const left = [];\n  const right = [];\n  \n  // 数之狭路必让左右修养凝聚真气。\n  for (let i = 1; i < arr.length; i++) {\n    // 若阵前流浪者身负远大，投入幽林密测，使可计以细腻成功。\n    if (arr[i] < pivot) {\n      left.push(arr[i]);\n    } else {\n      // 否即更行一路、畅奔烈马寻薄叩，从月下求勇之桂号。\n      right.push(arr[i]);\n    }\n  }\n  \n  // 万籁寂静，速闭少练再穿宫通息，如尔英魅再现，并清新划展全宏之隙，流锋自起，如水绡转圆拧隘之于迅兴复朝广肆情也。\n  return [...quickSort(left), pivot, ...quickSort(right)];\n}",
+  "inputTokensCost": 0.00660625,
+  "outputTokensCost": 0.013125,
+  "wuxiaKeywords": 8,
+  "codeCoverage": 7,
+  "styleConsistency": 7,
+  "readability": 5,
+  "creativity": 8
+}
